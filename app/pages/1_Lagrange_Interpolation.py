@@ -20,7 +20,7 @@ def lagrange_interpolation(x, y, x_values):
     x_values = np.asarray(x_values, dtype=np.float64)
     
     result = np.zeros_like(x_values)
-    n = len(x)
+    n = len(x) # Number of data points, number of months in the year
 
     # Compute individual terms of above formula
     for i in range(n):
@@ -81,7 +81,7 @@ if not df.empty:
     electricity = df[selected_column].values
 
     # Perform Lagrange interpolation
-    x_values = np.linspace(min(months), max(months), 100)
+    x_values = np.linspace(min(months), max(months), 100) #Creates an array of 100 evenly spaces points between the values of the months
     y_values = lagrange_interpolation(months, electricity, x_values)
 
     # Ploting the data and interpolation
