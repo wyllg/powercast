@@ -29,7 +29,7 @@ def find_data_type(c):
     for col in column_info:
         print(f"Column: {col[1]} | Type: {col[2]}")
 
-# find_data_type(c)
+find_data_type(c)
 
 def change_data_type(df):
     df["Month"] = pd.to_datetime(df["Month"], format="%b-%y").dt.strftime("%Y-%m")
@@ -45,3 +45,5 @@ def change_data_type(df):
 # df.to_sql("electricitydb", conn, index=False)
 
 # conn.close()
+
+
