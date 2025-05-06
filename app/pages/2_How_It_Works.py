@@ -34,7 +34,7 @@ st.markdown("""
 
 
 # Expanded form
-st.header("🔬 Expanded View")
+st.header("Expanded View")
 
 st.latex(r'''
 P(x) = y_0 \frac{(x-x_1)\cdots(x-x_n)}{(x_0-x_1)\cdots(x_0-x_n)}
